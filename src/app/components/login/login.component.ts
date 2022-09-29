@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import { Router } from '@angular/router';
+import {Router} from '@angular/router';
+import {Login} from "../../shared/models/login.model";
+import {LoginService} from "./service";
 
 @Component({
   selector: 'app-login',
@@ -10,31 +12,24 @@ import { Router } from '@angular/router';
 
 export class LoginComponent implements OnInit {
 
-  submitted = false;
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required])
   });
-  constructor(private formBuilder: FormBuilder, private router: Router) { }
 
-  ngOnInit() {
-    this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required]
-    });
+  constructor(private formBuilder: FormBuilder, private router: Router,
+              private loginService: LoginService) {
   }
 
-  get data() { // @ts-ignore
-    return this.loginForm.controls; }
+  ngOnInit() {
+  }
 
-  onSubmit() {
-    // @ts-ignore
+  logar() {
     if (this.loginForm.invalid) {
       return;
-    } else if (this.data['username'].value == localStorage.getItem("username") && this.data['password'].value == localStorage.getItem("password")) {
-      this.router.navigate(['/home']);
-    } else {
-      this.submitted = true;
     }
+    const login: Login = this.loginForm.value;
+    this.loginService.logar(login)
+      .subscribe();
   }
 }
