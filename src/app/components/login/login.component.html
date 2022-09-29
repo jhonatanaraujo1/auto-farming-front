@@ -6,19 +6,20 @@
     <div class="box-login">
       <div class="label-float">
         <input name="email" placeholder="_"/>
-        <label>E-mail</label>
+        <label>{{"LOGIN.EMAIL" | translate}}</label>
       </div>
       <div class="label-float">
         <input name="password" type="password" placeholder="_"/>
-        <label>Password</label>
+        <label>{{"LOGIN.PASSWORD" | translate}}</label>
       </div>
       <div class="group-option">
         <input type="checkbox"/>
-        <p>Permanecer conectado</p>
+        <p>{{"LOGIN.STAY_CONECTED" | translate}}</p>
       </div>
       <div class="group-button">
-        <button class="btn-login">Login</button>
-        <button class="btn-singup" routerLink="/signup">sign up</button>
+        <button class="btn-login">{{"LOGIN.LOGIN" | translate}}</button>
+        <button class="btn-singup" routerLink="/signup">{{"LOGIN.RESET" | translate}}</button>
+        <button class="btn-singup" >{{"LOGIN.SIGNUP" | translate}}</button>
       </div>
     </div>
   </div>

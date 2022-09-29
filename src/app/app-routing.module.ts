@@ -10,17 +10,12 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: HomeComponent,
+    component: LoginComponent,
 
   },
   {
     path: 'login',
     component: LoginComponent,
-
-  },
-  {
-    path: 'home',
-    component: HomeComponent,
 
   },
   {

@@ -1,0 +1,22 @@
+{
+  "NAVBAR": {
+    "ABOUT": "About",
+    "PRODUCT": "Product",
+    "HOME": "Home"
+  },
+  "LOGIN": {
+    "PASSWORD": "Password",
+    "EMAIL": "E-mail",
+    "RESET": "Forgot Password",
+    "STAY_CONECTED": "stay connected",
+    "SIGNUP": "Sign up",
+    "LOGIN": "Login"
+  },
+  "LANGUAGE": {
+    "EN": "English",
+    "PT": "Portuguese"
+  },
+  "INPUT": {
+    "EMAIL": "E-mail"
+  }
+}

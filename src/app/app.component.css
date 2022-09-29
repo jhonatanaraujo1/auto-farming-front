@@ -67,6 +67,14 @@
   font-weight: bold;
   box-shadow: 1px 1px 10px #999;
 }
+.dropdown-toggle::after {
+  display: none;
+}
+
+.language{
+  width: 15px;
+}
+
 
 .btn:hover {
   cursor: pointer;

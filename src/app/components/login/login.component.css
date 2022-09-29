@@ -119,7 +119,7 @@
 
 .btn-login {
   width: 80px;
-  height: 30px;
+  height: 45px;
   margin-left: 65px;
   margin-right: 10px;
   border: 0;
@@ -138,8 +138,9 @@
 }
 
 .btn-singup {
-  width: 80px;
-  height: 30px;
+  margin-right: 10px;
+  width: 90px;
+  height: 45px;
   border: 1px solid #f2f2f2;
   border-radius: 20px;
   background: transparent;
