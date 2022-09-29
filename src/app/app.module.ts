@@ -16,12 +16,13 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
 import {MatCardModule} from "@angular/material/card";
-import { CadastrarComponent } from './components/login/cadastrar/cadastrar.component';
+import { ResetPasswordComponent } from './components/login/reset-password/reset-password.component';
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {DatePipe} from "@angular/common";
-// AoT requires an exported function for factories
+import {LoginService} from "./components/login/service";
+
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
@@ -33,7 +34,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     DashboardComponent,
     HomeComponent,
     ProfileComponent,
-    CadastrarComponent
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +57,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       }
     })
   ],
-  providers: [DatePipe],
+  providers: [DatePipe,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
