@@ -29,6 +29,7 @@
   "PROFILE": {
     "NAME_PROFILE": "Profile Name",
     "STATUS_PROFILE":"In Progress",
-    "DAYS_PROFILE": "10/30 Days"
+    "DAYS_PROFILE": "10/30 Days",
+    "ADD_PROFILE": "New Profile"
   }
 }
