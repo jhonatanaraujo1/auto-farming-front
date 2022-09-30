@@ -22,6 +22,8 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {DatePipe} from "@angular/common";
 import {LoginService} from "./components/login/service";
+import { ListProfileComponent } from './components/profile/list-profile/list-profile.component';
+import { SignupComponent } from './components/login/sign-up/signup.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -34,7 +36,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     DashboardComponent,
     HomeComponent,
     ProfileComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    ListProfileComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

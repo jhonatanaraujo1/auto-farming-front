@@ -1,22 +1,28 @@
-<div class="login-page">
+<form   class="login-page">
   <div class="colunm-1">
-    <div class="img-box">
-      <img class="img" src="assets/img/bio.png"/>
-    </div>
     <div class="box-login">
       <div class="label-float">
-        <input name="email" type="email" placeholder="_"/>
+        <input name="email" placeholder="_"/>
+        <label>{{"USER.NAME" | translate}}</label>
+      </div>
+      <div class="label-float">
+        <input name="password" type="password" placeholder="_"/>
+        <label>{{"USER.USERNAME" | translate}}</label>
+      </div>
+      <div class="label-float">
+        <input name="password" type="password" placeholder="_"/>
         <label>{{"LOGIN.EMAIL" | translate}}</label>
       </div>
       <div class="label-float">
         <input name="password" type="password" placeholder="_"/>
         <label>{{"LOGIN.PASSWORD" | translate}}</label>
       </div>
-
+      <div class="label-float">
+        <input name="confirm-password"  type="password" placeholder="_"/>
+        <label>{{"LOGIN.CONFIRM_PASSWORD" | translate}}</label>
+      </div>
       <div class="group-button">
-        <button class="btn-login">{{"LOGIN.LOGIN" | translate}}</button>
-        <button class="btn-singup" routerLink="/reset">{{"LOGIN.RESET" | translate}}</button>
-        <button class="btn-singup" routerLink="/signup">{{"LOGIN.SIGNUP_LOGIN" | translate}}</button>
+        <button class="btn-login">{{"LOGIN.SIGNUP" | translate}}</button>
       </div>
     </div>
   </div>
@@ -31,4 +37,4 @@
       <div class="details"></div>
     </div>
   </div>
-</div>
+</form>

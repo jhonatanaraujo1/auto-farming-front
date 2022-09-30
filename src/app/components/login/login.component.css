@@ -24,7 +24,7 @@
 .box-login {
   display: flex;
   width: 100%;
-  margin-top: 70%;
+  margin-top: 30%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -139,7 +139,7 @@
 
 .btn-singup {
   margin-right: 10px;
-  width: 90px;
+  width: 95px;
   height: 45px;
   border: 1px solid #f2f2f2;
   border-radius: 20px;

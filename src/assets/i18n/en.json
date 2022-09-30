@@ -6,10 +6,12 @@
   },
   "LOGIN": {
     "PASSWORD": "Password",
+    "CONFIRM_PASSWORD": "Confirm Password",
     "EMAIL": "E-mail",
     "RESET": "Forgot Password",
     "STAY_CONECTED": "stay connected",
-    "SIGNUP": "Sign up",
+    "SIGNUP": "Register",
+    "SIGNUP_LOGIN": "Sign up",
     "LOGIN": "Login"
   },
   "LANGUAGE": {
@@ -18,5 +20,11 @@
   },
   "INPUT": {
     "EMAIL": "E-mail"
+  },
+  "USER":{
+    "NAME": "Name",
+    "LAST_NAME": "Ultimo nome",
+    "USERNAME": "UserName"
+
   }
 }
