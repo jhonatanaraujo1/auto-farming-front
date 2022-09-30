@@ -19,7 +19,9 @@
     "PT": "Portuguese"
   },
   "INPUT": {
-    "EMAIL": "E-mail"
+    "EMAIL": "E-mail",
+    "SEARCH": "Search",
+    "SOCIAL_NETWORK": "Social network"
   },
   "USER":{
     "NAME": "Name",
@@ -30,6 +32,14 @@
     "NAME_PROFILE": "Profile Name",
     "STATUS_PROFILE":"In Progress",
     "DAYS_PROFILE": "10/30 Days",
-    "ADD_PROFILE": "New Profile"
+    "ADD_PROFILE": "New Profile",
+    "INSTAGRAM": "Instagram",
+    "FACEBOOK": "Facebook",
+    "TIKTOK": "TikTok"
+  },
+  "STATUS": {
+    "IN_PROGRESS": "In progress",
+    "FINISHED": "Finished",
+    "STOPPED": "Stoped"
   }
 }
