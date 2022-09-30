@@ -74,7 +74,9 @@
 .language{
   width: 15px;
 }
-
+ng-select select-dropdown > div {
+  z-index: 99999999;
+}
 
 .btn:hover {
   cursor: pointer;

@@ -25,6 +25,10 @@
     "NAME": "Name",
     "LAST_NAME": "Ultimo nome",
     "USERNAME": "UserName"
-
+  },
+  "PROFILE": {
+    "NAME_PROFILE": "Profile Name",
+    "STATUS_PROFILE":"In Progress",
+    "DAYS_PROFILE": "10/30 Days"
   }
 }

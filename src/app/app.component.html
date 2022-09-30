@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<div class="colunm-2" >
+<div class="colunm-2"  >
   <div class="header">
     <div class="img-box">
       <img class="img" src="assets/img/bio.png"/>
@@ -7,13 +7,15 @@
     <button class="btn">{{"NAVBAR.ABOUT" | translate}}</button>
     <button class="btn">{{"NAVBAR.PRODUCT" | translate}}</button>
     <button class="btn active" routerLink="/login" >{{"NAVBAR.HOME" | translate}}</button>
-    <div ngbDropdown class="d-inline-block">
+
+    <div ngbDropdown class="d-inline-block" >
       <button type="button" class="btn  language" id="dropdownBasic1" aria-hidden="true" ngbDropdownToggle><mat-icon>language</mat-icon></button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" aria-hidden="true" >
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" aria-hidden="true"  >
         <button ngbDropdownItem (click)="changeLanguage('pt')" >{{"LANGUAGE.PT" | translate}}</button>
         <button ngbDropdownItem (click)="changeLanguage('en')">{{"LANGUAGE.EN" | translate}}</button>
       </div>
     </div>
+
   </div>
 </div>
 
