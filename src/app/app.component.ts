@@ -1,3 +1,5 @@
+import { TokenStorageService } from 'src/app/services/TokenStorageService';
+import { AuthService } from './components/login/service/login.service';
 import {Component} from '@angular/core';
 import {Router} from "@angular/router";
 import {TranslateService} from "@ngx-translate/core";
@@ -10,13 +12,20 @@ import {TranslateService} from "@ngx-translate/core";
 export class AppComponent {
   title = 'Social Farming';
 
-  constructor(private router: Router, public translate: TranslateService) {
+  constructor(private router: Router, public translate: TranslateService, public authService: AuthService, public token: TokenStorageService) {
     translate.addLangs(['pt', 'br']);
     translate.setDefaultLang('pt');
     translate.use('pt');
   }
 
   ngOnInit() {
+  }
+
+
+  public logout() {
+    this.token.signOut();
+
+    window.location.reload()
   }
 
   public changeLanguage(lng: string) {

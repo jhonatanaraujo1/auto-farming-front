@@ -1,3 +1,5 @@
+import { AuthenticationComponent } from './components/authentication/authentication.component';
+import { RouterModule } from '@angular/router';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
@@ -20,13 +22,14 @@ import { ResetPasswordComponent } from './components/login/reset-password/reset-
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
-import {DatePipe} from "@angular/common";
-import {LoginService} from "./components/login/service";
+import {CommonModule, DatePipe} from "@angular/common";
+import {AuthService} from "./components/login/service";
 import { ListProfileComponent } from './components/profile/list-profile/list-profile.component';
 import { SignupComponent } from './components/login/sign-up/signup.component';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatSelectModule} from "@angular/material/select";
+import { authInterceptorProviders } from './helpers/auth.interceptor';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -41,7 +44,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ProfileComponent,
     ResetPasswordComponent,
     ListProfileComponent,
-    SignupComponent
+    SignupComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
@@ -65,9 +69,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     }),
     MatProgressBarModule,
     MatMenuModule,
-    MatSelectModule
+    MatSelectModule,
+    RouterModule,
+    CommonModule
   ],
-  providers: [DatePipe,LoginService],
+  providers: [DatePipe,AuthService, authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule {

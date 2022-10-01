@@ -2,7 +2,8 @@
   "NAVBAR": {
     "ABOUT": "Sobre",
     "PRODUCT": "Produto",
-    "HOME": "Inicio"
+    "HOME": "Inicio",
+    "LOGOUT": "Sair"
   },
   "LOGIN": {
     "PASSWORD": "Senha",

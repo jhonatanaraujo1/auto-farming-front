@@ -6,7 +6,8 @@
     </div>
     <button class="btn">{{"NAVBAR.ABOUT" | translate}}</button>
     <button class="btn">{{"NAVBAR.PRODUCT" | translate}}</button>
-    <button class="btn active" routerLink="/login" >{{"NAVBAR.HOME" | translate}}</button>
+    <button class="btn" routerLink="/" >{{"NAVBAR.HOME" | translate}}</button>
+    <button class="btn" (click)="logout()" *ngIf="authService.isLoggedIn$ | async">{{"NAVBAR.LOGOUT" | translate}}</button>
 
     <div ngbDropdown class="d-inline-block" >
       <button type="button" class="btn  language" id="dropdownBasic1" aria-hidden="true" ngbDropdownToggle><mat-icon>language</mat-icon></button>
