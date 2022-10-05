@@ -27,6 +27,10 @@ import { SignupComponent } from './components/login/sign-up/signup.component';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatSelectModule} from "@angular/material/select";
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
+import {MatTabsModule} from "@angular/material/tabs";
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -65,9 +69,13 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     }),
     MatProgressBarModule,
     MatMenuModule,
-    MatSelectModule
+    MatSelectModule,
+    MatExpansionModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTabsModule
   ],
-  providers: [DatePipe,LoginService],
+  providers: [MatDatepickerModule,DatePipe,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
