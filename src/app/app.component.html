@@ -20,7 +20,6 @@
     <div ngbDropdown class="d-inline-block" *ngIf="userLogged" >
       <button type="button" class="btn  language" id="dropdownUser" aria-hidden="true" ngbDropdownToggle><mat-icon>account_circle </mat-icon></button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1" aria-hidden="true"  >
-<!--        <button ngbDropdownItem >{{"USER.SETUP" | translate}}</button>-->
         <button ngbDropdownItem (click)="openDialog()" >{{"NAVBAR.HELP" | translate}}</button>
         <button ngbDropdownItem (click)="logOut()" >{{"NAVBAR.LOGOUT" | translate}}</button>
       </div>
