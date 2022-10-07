@@ -27,17 +27,9 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    // const { email, password } = this.loginForm;
 
-    // const login: Login = this.loginForm.value;
-
-    const login = {
-      "email": "meuemaisadasdl@email.com",
-      "password": "123"
-    }
-
-    const { email, password } = login;
-
+    const { email, password } = this.loginForm.value;
+    debugger;
     this.AuthService.login(email, password).subscribe({
       next: data => {
         this.tokenStorage.saveToken(data.accessToken);

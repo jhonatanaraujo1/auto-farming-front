@@ -6,14 +6,14 @@
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="box-login">
         <div class="label-float">
-          <input name="email" type="email" placeholder="_"/>
+          <input name="email" type="email"  formControlName="email" placeholder="_"/>
           <label>{{"LOGIN.EMAIL" | translate}}</label>
         </div>
         <div class="label-float">
-          <input name="password" type="password" placeholder="_"/>
+          <input name="password" type="password" formControlName="password" placeholder="_"/>
           <label>{{"LOGIN.PASSWORD" | translate}}</label>
         </div>
-  
+
         <div class="group-button">
           <button class="btn-login" type="submit">{{"LOGIN.LOGIN" | translate}}</button>
           <button class="btn-singup" routerLink="/reset">{{"LOGIN.RESET" | translate}}</button>
