@@ -4,9 +4,10 @@
     <div class="img-box">
       <img class="img" src="assets/img/bio.png"/>
     </div>
-    <button class="btn">{{"NAVBAR.ABOUT" | translate}}</button>
-    <button class="btn">{{"NAVBAR.PRODUCT" | translate}}</button>
     <button class="btn active" routerLink="/login" >{{"NAVBAR.HOME" | translate}}</button>
+    <button class="btn" *ngIf="!userLogged">{{"NAVBAR.ABOUT" | translate}}</button>
+    <button class="btn" *ngIf="!userLogged">{{"NAVBAR.PRODUCT" | translate}}</button>
+    <button class="btn" routerLink="/dashboard" *ngIf="userLogged">{{"NAVBAR.DASHBOARD" | translate}}</button>
 
     <div ngbDropdown class="d-inline-block" >
       <button type="button" class="btn  language" id="dropdownBasic1" aria-hidden="true" ngbDropdownToggle><mat-icon>language</mat-icon></button>
@@ -16,6 +17,14 @@
       </div>
     </div>
 
+    <div ngbDropdown class="d-inline-block" *ngIf="userLogged" >
+      <button type="button" class="btn  language" id="dropdownUser" aria-hidden="true" ngbDropdownToggle><mat-icon>account_circle </mat-icon></button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" aria-hidden="true"  >
+<!--        <button ngbDropdownItem >{{"USER.SETUP" | translate}}</button>-->
+        <button ngbDropdownItem (click)="openDialog()" >{{"NAVBAR.HELP" | translate}}</button>
+        <button ngbDropdownItem (click)="logOut()" >{{"NAVBAR.LOGOUT" | translate}}</button>
+      </div>
+    </div>
   </div>
 </div>
 

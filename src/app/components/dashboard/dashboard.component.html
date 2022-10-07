@@ -1,1 +1,44 @@
-<p>dashboard works!</p>
+<div class=" seach-box">
+
+  <div style="padding-left: 2%">
+    <mat-form-field appearance="fill">
+      <mat-label>{{"INPUT.SOCIAL_NETWORK" |translate}}</mat-label>
+      <mat-select [formControl]="toppings" multiple>
+        <mat-option *ngFor="let socialMidia of socialList" [value]="socialMidia">{{socialMidia |translate}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div style="padding-left: 2%">
+    <mat-form-field appearance="fill">
+      <mat-label>Status</mat-label>
+      <mat-select [formControl]="toppings" multiple>
+        <mat-option *ngFor="let status of statusList" [value]="status">{{status|translate}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="row card-box" >
+  <div class="col-sm-2 chart-box" style="display: block">
+    <canvas baseChart class="chart-box"
+            [type]="'pie'"
+            [datasets]="pieChartDatasets"
+            [labels]="pieChartLabels"
+            [options]="pieChartOptions"
+            [plugins]="pieChartPlugins"
+            [legend]="pieChartLegend">
+    </canvas>
+  </div>
+
+  <div class="col-sm-2 chart-box" style="display: block">
+    <canvas baseChart class="chart-box"
+            [type]="'pie'"
+            [datasets]="pieChartDatasetsProgress"
+            [labels]="pieChartLabelsProgress"
+            [options]="pieChartOptionsProgress"
+            [plugins]="pieChartPluginsProgress"
+            [legend]="pieChartLegendProgress">
+    </canvas>
+  </div>
+</div>

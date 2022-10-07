@@ -1,0 +1,15 @@
+.seach-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.card-box {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 3%;
+}
+
+.chart-box {
+  width: 420px;
+}

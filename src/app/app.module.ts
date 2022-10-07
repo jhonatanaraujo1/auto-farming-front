@@ -31,6 +31,10 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatTabsModule} from "@angular/material/tabs";
+import { SupportComponent } from './components/support/support.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {NgChartsModule} from "ng2-charts";
+import { CreateProfileComponent } from './components/profile/create-profile/create-profile.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -45,36 +49,40 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ProfileComponent,
     ResetPasswordComponent,
     ListProfileComponent,
-    SignupComponent
+    SignupComponent,
+    SupportComponent,
+    CreateProfileComponent
   ],
-  imports: [
-    BrowserModule,
-    NgbModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    }),
-    MatProgressBarModule,
-    MatMenuModule,
-    MatSelectModule,
-    MatExpansionModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatTabsModule
-  ],
+    imports: [
+        BrowserModule,
+        NgbModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        HttpClientModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
+        MatProgressBarModule,
+        MatMenuModule,
+        MatSelectModule,
+        MatExpansionModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatTabsModule,
+        MatDialogModule,
+        NgChartsModule
+    ],
   providers: [MatDatepickerModule,DatePipe,LoginService],
   bootstrap: [AppComponent]
 })

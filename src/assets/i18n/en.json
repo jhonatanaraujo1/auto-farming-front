@@ -2,7 +2,10 @@
   "NAVBAR": {
     "ABOUT": "About",
     "PRODUCT": "Product",
-    "HOME": "Home"
+    "DASHBOARD": "Dashboard",
+    "HOME": "Home",
+    "LOGOUT": "Logout",
+    "HELP": "Support"
   },
   "LOGIN": {
     "PASSWORD": "Password",
@@ -21,16 +24,18 @@
   "INPUT": {
     "EMAIL": "E-mail",
     "SEARCH": "Search",
-    "SOCIAL_NETWORK": "Social network"
+    "SOCIAL_NETWORK": "Social network",
+    "CLOSE": "Close"
   },
-  "USER":{
+  "USER": {
     "NAME": "Name",
     "LAST_NAME": "Ultimo nome",
-    "USERNAME": "UserName"
+    "USERNAME": "UserName",
+    "SETUP": "Setup"
   },
   "PROFILE": {
     "NAME_PROFILE": "Profile Name",
-    "STATUS_PROFILE":"In Progress",
+    "STATUS_PROFILE": "In Progress",
     "DAYS_PROFILE": "10/30 Days",
     "ADD_PROFILE": "New Profile",
     "INSTAGRAM": "Instagram",
@@ -41,5 +46,10 @@
     "IN_PROGRESS": "In progress",
     "FINISHED": "Finished",
     "STOPPED": "Stoped"
+  },
+  "SUPPORT":{
+    "SUPPORT_NAME": "Support Farming Social",
+    "MSG_SEND_EMAIL": "Se tiver alguma duvida de como utilizar o Farming Social, por favor envie um email para nosso suporte com o topico do assunto.",
+    "MSG_SEND_EMAIL2": "Envie os dados necessarios para agilizar o seu atendimento, muito obrigado."
   }
 }

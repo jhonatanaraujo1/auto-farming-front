@@ -11,13 +11,11 @@ interface Animal {
   styleUrls: ['./list-profile.component.css']
 })
 export class ListProfileComponent implements OnInit {
-
+  toppings = new FormControl('');
   constructor() { }
 
   ngOnInit(): void {
   }
-  toppings = new FormControl('');
   socialList: string[] = ['PROFILE.INSTAGRAM', 'PROFILE.FACEBOOK', 'PROFILE.TIKTOK'];
-
   statusList: string[] = ['STATUS.IN_PROGRESS', 'STATUS.STOPPED', 'STATUS.FINISHED'];
 }
