@@ -14,7 +14,7 @@ export class AuthService {
 
   private readonly PATH: string = 'auth';
 
-  constructor(private http: HttpClient, private token: TokenStorageService) { 
+  constructor(private http: HttpClient, private token: TokenStorageService) {
     const jwt = this.token.getToken();
     this._isLoggedIn$.next(!!jwt);
   }
