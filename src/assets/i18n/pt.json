@@ -19,7 +19,7 @@
     "LOGIN": "Login"
   },
   "LANGUAGE": {
-    "EN": "Inglês",
+    "EN": "English",
     "PT": "Portugues"
   },
   "INPUT": {
@@ -35,6 +35,7 @@
     "SETUP": "Propriedades"
   },
   "PROFILE": {
+    "PROFILE":"Perfis",
     "NAME_PROFILE": "Nome do Profile",
     "STATUS_PROFILE":"Em Andamento",
     "DAYS_PROFILE": "10/30 Dias",

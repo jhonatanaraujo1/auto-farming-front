@@ -23,7 +23,7 @@ import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {CommonModule,DatePipe} from "@angular/common";
-import {AuthService,LoginService} from "./components/login/service";
+import {AuthService} from "./components/login/service";
 import { ListProfileComponent } from './components/profile/list-profile/list-profile.component';
 import { SignupComponent } from './components/login/sign-up/signup.component';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
@@ -89,7 +89,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     MatDialogModule,
     NgChartsModule
   ],
-  providers: [MatDatepickerModule,DatePipe,AuthService, authInterceptorProviders ,LoginService],
+  providers: [MatDatepickerModule,DatePipe,AuthService, authInterceptorProviders ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
