@@ -1,3 +1,5 @@
+import { AuthenticationComponent } from './components/authentication/authentication.component';
+import { RouterModule } from '@angular/router';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
@@ -20,13 +22,14 @@ import { ResetPasswordComponent } from './components/login/reset-password/reset-
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
-import {DatePipe} from "@angular/common";
-import {LoginService} from "./components/login/service";
+import {CommonModule,DatePipe} from "@angular/common";
+import {AuthService,LoginService} from "./components/login/service";
 import { ListProfileComponent } from './components/profile/list-profile/list-profile.component';
 import { SignupComponent } from './components/login/sign-up/signup.component';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatSelectModule} from "@angular/material/select";
+import { authInterceptorProviders } from './helpers/auth.interceptor';
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
@@ -51,39 +54,42 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ListProfileComponent,
     SignupComponent,
     SupportComponent,
-    CreateProfileComponent
+    CreateProfileComponent,
+    AuthenticationComponent
   ],
-    imports: [
-        BrowserModule,
-        NgbModule,
-        AppRoutingModule,
-        ReactiveFormsModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatButtonModule,
-        MatFormFieldModule,
-        MatInputModule,
-        BrowserAnimationsModule,
-        MatCardModule,
-        HttpClientModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        }),
-        MatProgressBarModule,
-        MatMenuModule,
-        MatSelectModule,
-        MatExpansionModule,
-        MatDatepickerModule,
-        MatNativeDateModule,
-        MatTabsModule,
-        MatDialogModule,
-        NgChartsModule
-    ],
-  providers: [MatDatepickerModule,DatePipe,LoginService],
+  imports: [
+    BrowserModule,
+    NgbModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+    MatProgressBarModule,
+    MatMenuModule,
+    MatSelectModule,
+    RouterModule,
+    CommonModule,
+    MatExpansionModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTabsModule,
+    MatDialogModule,
+    NgChartsModule
+  ],
+  providers: [MatDatepickerModule,DatePipe,AuthService, authInterceptorProviders ,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
