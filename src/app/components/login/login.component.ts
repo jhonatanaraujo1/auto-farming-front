@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
-import { AuthService } from "./service/login.service";
-import { TokenStorageService } from 'src/app/services/TokenStorageService';
+import {AuthService} from "./service/login.service";
+import {TokenStorageService} from 'src/app/services/TokenStorageService';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -28,8 +29,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
 
-    const { email, password } = this.loginForm.value;
-    debugger;
+    const {email, password} = this.loginForm.value;
     this.AuthService.login(email, password).subscribe({
       next: data => {
         this.tokenStorage.saveToken(data.accessToken);
