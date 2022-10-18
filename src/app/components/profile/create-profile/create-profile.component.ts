@@ -11,10 +11,10 @@ import {ProfileService} from "../../../services/profile.service";
   styleUrls: ['./create-profile.component.css']
 })
 export class CreateProfileComponent implements OnInit {
-  countryRegion: string[] | undefined;
-  timesGrow: number [] | undefined;
-  typesGrow: string[] | undefined;
-  genders: string[] | undefined;
+  countryRegion!: string[];
+  timesGrow!: number [];
+  typesGrow!: string[];
+  genders!: string[];
   form!: FormGroup;
   matcher: any;
 
@@ -33,7 +33,12 @@ export class CreateProfileComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.generateForm()
+    this.generateForm();
+    this.generateEnums();
+
+  }
+
+  generateEnums() {
     this.countryRegion = [
       CountryRegion.SUL,
       CountryRegion.NORTE,
@@ -65,6 +70,5 @@ export class CreateProfileComponent implements OnInit {
   create() {
     const profile = this.form.value;
     this.profileService.create(profile);
-
   }
 }
