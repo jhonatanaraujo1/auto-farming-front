@@ -1,7 +1,6 @@
-<mat-accordion  class="example-headers-align" style="display: flex;justify-content: center; ">
-  <mat-tab-group mat-align-tabs="center"
-                 style="max-width: 1000px!important; width: 750px; border: 1px solid gray; border-radius: 10px; margin: 3%">
-    <mat-tab label="Perfil">
+<mat-accordion class="example-headers-align" style="display: flex;justify-content: center; " >
+  <mat-tab-group mat-align-tabs="center" style="width: 90%; border: 1px solid gray; border-radius: 10px; margin: 3%"  >
+    <mat-tab label="Passos de aquecimento" >
 
       <mat-expansion-panel [expanded]="step === i" *ngFor="let res of resultado; index as i"
                            (opened)="setStep(i)" hideToggle style="  border-bottom: 1px solid gray; justify-content: center">
@@ -20,7 +19,7 @@
       </mat-expansion-panel>
     </mat-tab>
 
-    <mat-tab label="Propriedades" disabled="disabled">
+    <mat-tab label="Informações do perfil" disabled="disabled">
     </mat-tab>
   </mat-tab-group>
 </mat-accordion>
