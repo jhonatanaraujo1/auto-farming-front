@@ -1,4 +1,4 @@
-<div class=" seach-box" >
+<div class=" seach-box">
   <div>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>{{"INPUT.SEARCH" |translate}}</mat-label>
@@ -41,8 +41,8 @@
   </div>
 
   <div class="col-sm-3 " *ngFor="let r of resultado" style="padding-top: 2%">
-    <div class="card" >
-      <div class="card-body is-focusable card-profile"  routerLink="/profile">
+    <div class="card">
+      <div class="card-body is-focusable card-profile" routerLink="/profile">
         <h4 class="card-title">{{r.profile_name}}
           <mat-icon style="font-size: 13px; margin-top: 2px; color: blue">{{r.profile_icon}}</mat-icon>
         </h4>

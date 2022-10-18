@@ -1,9 +1,11 @@
-<mat-accordion class="example-headers-align" style="display: flex;justify-content: center; " >
-  <mat-tab-group mat-align-tabs="center" style="max-width: 1000px!important; width: 750px; border: 1px solid gray; border-radius: 10px; margin: 3%"  >
-    <mat-tab label="Perfil" >
+<mat-accordion class="example-headers-align" style="display: flex;justify-content: center; ">
+  <mat-tab-group mat-align-tabs="center"
+                 style="max-width: 1000px!important; width: 750px; border: 1px solid gray; border-radius: 10px; margin: 3%">
+    <mat-tab label="Perfil">
 
-      <mat-expansion-panel [expanded]="step === i" *ngFor="let r of resultado; index as i; first as isFirst"  (opened)="setStep(i)" hideToggle style="  border-bottom: 1px solid gray"  >
-        <mat-expansion-panel-header >
+      <mat-expansion-panel [expanded]="step === i" *ngFor="let r of resultado; index as i; first as isFirst"
+                           (opened)="setStep(i)" hideToggle style="  border-bottom: 1px solid gray">
+        <mat-expansion-panel-header>
           <mat-panel-title>
             Personal data
           </mat-panel-title>
@@ -13,11 +15,11 @@
           </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-form-field appearance="fill">
-          <mat-label>First name </mat-label>
+          <mat-label>First name</mat-label>
           <input matInput>
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <mat-label>Age </mat-label>
+          <mat-label>Age</mat-label>
           <input matInput type="number" min="1">
         </mat-form-field>
         <mat-action-row>
@@ -30,7 +32,7 @@
     <mat-tab label="Propriedades" disabled="disabled">
       <div class="container my-3 my-sm-5">
         <h1 class="mb-3 mb-sm-5 text-center">Update your account</h1>
-        <div class="row"style="display:flex;justify-content: center;align-items: center;">
+        <div class="row" style="display:flex;justify-content: center;align-items: center;">
           <div class="col-12 col-md-4 mb-4">
             <div class="card card-outline-success text-center">
               <div class="card-header bg-success text-white">
@@ -49,7 +51,7 @@
                 <li class="list-group-item">TESTE</li>
               </ul>
               <div class="card-footer">
-                <button type="button" class="btn btn-success btn-lg" >
+                <button type="button" class="btn btn-success btn-lg">
                   Select
                 </button>
               </div>
