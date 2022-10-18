@@ -227,13 +227,6 @@
   border-bottom: 1px solid #64528b;
 }
 
-.body {
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-
 .options-btn {
   position: absolute;
   right: 0;
@@ -300,23 +293,13 @@
     padding-bottom: 80px;
   }
 
-  .img-box {
-    margin-left: 40%;
-    margin-top: 30%;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    opacity: 1;
-    visibility: visible;
-  }
+
   .img{
     width: 80px;
     height: 80px;
   }
 
-  .img-play {
-    display: none;
-  }
+
 
   .colunm-2 {
     display: none;

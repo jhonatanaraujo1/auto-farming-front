@@ -38,6 +38,8 @@ import { SupportComponent } from './components/support/support.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {NgChartsModule} from "ng2-charts";
 import { CreateProfileComponent } from './components/profile/create-profile/create-profile.component';
+import {MatRadioModule} from "@angular/material/radio";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -87,7 +89,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     MatNativeDateModule,
     MatTabsModule,
     MatDialogModule,
-    NgChartsModule
+    NgChartsModule,
+    MatRadioModule,
+    MatCheckboxModule
   ],
   providers: [MatDatepickerModule,DatePipe,AuthService, authInterceptorProviders ],
   bootstrap: [AppComponent]

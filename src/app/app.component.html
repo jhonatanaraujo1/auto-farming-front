@@ -8,9 +8,9 @@
     <button class="btn" routerLink="/listprofile" *ngIf="authService.isLoggedIn$ | async">{{"PROFILE.PROFILE" | translate}}</button>
 
 
-    <div ngbDropdown class="d-inline-block" >
+    <div ngbDropdown class="d-inline-block"  >
       <button type="button" class="btn  language" id="dropdownBasic1" aria-hidden="true" ngbDropdownToggle><mat-icon>language</mat-icon></button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" aria-hidden="true"  >
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1"  aria-hidden="true" appendto="'body'"  >
         <button ngbDropdownItem (click)="changeLanguage('pt')" >{{"LANGUAGE.PT" | translate}}</button>
         <button ngbDropdownItem (click)="changeLanguage('en')">{{"LANGUAGE.EN" | translate}}</button>
       </div>
