@@ -9,6 +9,7 @@ import {ProfileComponent} from "./components/profile/profile.component";
 import {ListProfileComponent} from "./components/profile/list-profile/list-profile.component";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {SignupComponent} from "./components/login/sign-up/signup.component";
+import {ResetPasswordComponent} from "./components/login/reset-password/reset-password.component";
 
 const routes: Routes = [
   {
@@ -30,6 +31,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'login', pathMatch: 'full'},
       { path: 'login', component: LoginComponent},
       { path: 'signup', component: SignupComponent},
+      { path: 'reset', component: ResetPasswordComponent},
       { path: '**', redirectTo: 'login' }
     ],
     canActivate: [ ReverseAuthGuard ]
