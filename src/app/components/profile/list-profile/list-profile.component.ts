@@ -1,12 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, Validators} from "@angular/forms";
 import {CreateProfileComponent} from "../create-profile/create-profile.component";
 import {MatDialog} from "@angular/material/dialog";
 
-interface Animal {
-  name: string;
-  sound: string;
-}
 @Component({
   selector: 'app-list-profile',
   templateUrl: './list-profile.component.html',
@@ -14,7 +10,53 @@ interface Animal {
 })
 export class ListProfileComponent implements OnInit {
   toppings = new FormControl('');
-  constructor(public dialog: MatDialog) { }
+  resultado = [{
+    "profile_name": "Perfil Facebook 1",
+    "profile_status": "EM ANDAMENTO",
+    "profile_icon": "facebook",
+    "profile_days": "10",
+    "profile_percent_done": "25",
+    "profile_plan_day": "30",
+  },
+    {
+      "profile_name": "Perfil 1",
+      "profile_status": "EM ANDAMENTO",
+      "profile_icon": "facebook",
+      "profile_days": "28",
+      "profile_percent_done": "98",
+      "profile_plan_day": "30",
+    },
+    {
+      "profile_name": "Fan page 1",
+      "profile_status": "EM ANDAMENTO",
+      "profile_icon": "facebook",
+      "profile_days": "35",
+      "profile_percent_done": "65",
+      "profile_plan_day": "60",
+    },
+    {
+      "profile_name": "BM 1",
+      "profile_status": "EM ANDAMENTO",
+      "profile_icon": "facebook",
+      "profile_days": "30",
+      "profile_percent_done": "89",
+      "profile_plan_day": "45",
+    },
+    {
+      "profile_name": "Conta de anuncio 1",
+      "profile_status": "EM ANDAMENTO",
+      "profile_icon": "facebook",
+      "profile_days": "65",
+      "profile_percent_done": "65",
+      "profile_plan_day": "150",
+    }
+
+  ]
+  socialList: string[] = ['PROFILE.INSTAGRAM', 'PROFILE.FACEBOOK', 'PROFILE.TIKTOK'];
+  statusList: string[] = ['STATUS.IN_PROGRESS', 'STATUS.STOPPED', 'STATUS.FINISHED'];
+
+  constructor(public dialog: MatDialog) {
+  }
 
   ngOnInit(): void {
   }
@@ -25,7 +67,4 @@ export class ListProfileComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
-
-  socialList: string[] = ['PROFILE.INSTAGRAM', 'PROFILE.FACEBOOK', 'PROFILE.TIKTOK'];
-  statusList: string[] = ['STATUS.IN_PROGRESS', 'STATUS.STOPPED', 'STATUS.FINISHED'];
 }

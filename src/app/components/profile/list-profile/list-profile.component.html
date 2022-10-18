@@ -27,7 +27,7 @@
 
 <div class="row card-box">
 
-  <div class="col-sm-3" (click)="openDialog()">
+  <div class="col-sm-3" (click)="openDialog()" style="padding-top: 2%">
     <div class="card">
       <div class="card-body is-focusable-add card-profile-add">
         <div class="row">
@@ -40,41 +40,16 @@
     </div>
   </div>
 
-  <div class="col-sm-3 ">
-    <div class="card">
+  <div class="col-sm-3 " *ngFor="let r of resultado" style="padding-top: 2%">
+    <div class="card" >
       <div class="card-body is-focusable card-profile" routerLink="/profile">
-        <h4 class="card-title">{{"PROFILE.NAME_PROFILE"|translate}}
-          <mat-icon style="font-size: 13px; margin-top: 2px; color: blue">facebook</mat-icon>
+        <h4 class="card-title">{{r.profile_name}}
+          <mat-icon style="font-size: 13px; margin-top: 2px; color: blue">{{r.profile_icon}}</mat-icon>
         </h4>
-        <p class="card-text">{{"PROFILE.STATUS_PROFILE"|translate}}</p>
-        <p class="card-text">{{"PROFILE.DAYS_PROFILE"|translate}}</p>
-        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+        <p class="card-text">{{r.profile_status}}</p>
+        <p class="card-text">{{r.profile_days}}</p>
+        <mat-progress-bar mode="determinate" value="{{r.profile_percent_done}}"></mat-progress-bar>
       </div>
     </div>
   </div>
-
-  <div class="col-sm-3 ">
-    <div class="card">
-      <div class="card-body  is-focusable card-profile">
-        <h4 class="card-title">{{"PROFILE.NAME_PROFILE"|translate}}
-          <mat-icon style="font-size: 13px; margin-top: 2px; color: black">tiktok</mat-icon>
-        </h4>
-        <p class="card-text">{{"PROFILE.STATUS_PROFILE"|translate}}</p>
-        <p class="card-text">{{"PROFILE.DAYS_PROFILE"|translate}}</p>
-        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-3  ">
-    <div class="card">
-      <div class="card-body is-focusable card-profile">
-        <h4 class="card-title">{{"PROFILE.NAME_PROFILE"|translate}} <span style="color: red">#</span></h4>
-        <p class="card-text">{{"PROFILE.STATUS_PROFILE"|translate}}</p>
-        <p class="card-text">{{"PROFILE.DAYS_PROFILE"|translate}}</p>
-        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-      </div>
-    </div>
-  </div>
-
 </div>
