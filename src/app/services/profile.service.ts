@@ -9,7 +9,7 @@ import {TokenStorageService} from "./TokenStorageService";
   providedIn: 'root'
 })
 export class ProfileService {
-  private readonly PATH: string = 'lancamentos';
+  private readonly PATH: string = 'profile';
 
   constructor(
     private http: HttpClient, private httpToken: TokenStorageService) {
@@ -21,4 +21,18 @@ export class ProfileService {
       profile
     );
   }
+
+  getList(): Observable<any> {
+    return this.http.get(
+      environment.baseApiUrl + this.PATH
+    );
+  }
+
+  get(id: any): Observable<any> {
+    return this.http.get(
+      environment.baseApiUrl + this.PATH + "/" + id
+    );
+  }
+
+
 }

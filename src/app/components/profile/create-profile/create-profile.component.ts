@@ -68,7 +68,6 @@ export class CreateProfileComponent implements OnInit {
   }
 
   create() {
-    const profile = this.form.value;
-    this.profileService.create(profile);
+    this.profileService.create(this.form.value);
   }
 }

@@ -1,4 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
+import {TokenStorageService} from "../../services/TokenStorageService";
+import {TaskService} from "../../services/task.service";
+import {EventEmitter} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-profile',
@@ -34,12 +38,26 @@ export class ProfileComponent implements OnInit {
       "task_response": "Assista lives por 900 horas sem parar"
     }
   ]
+  errorMessage = '';
 
-  constructor() {
+
+  constructor(private tokenStorage: TokenStorageService, private taskService: TaskService, private _route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
+    this.getProfileTask()
+  }
 
+  getProfileTask() {
+    this.taskService.getListTask(parseInt(<string>this._route.snapshot.paramMap.get('id'))).subscribe({
+      next: data => {
+        this.resultado = data;
+      },
+      error: err => {
+        console.log(err)
+        this.errorMessage = err.error.message;
+      }
+    });
   }
 
   setStep(index: number) {
